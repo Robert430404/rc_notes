@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
-  http_basic_authenticate_with name: "robert", password: "Lian#430404"
-  
+  before_action :authenticate_user!
+
   def index
     @notes = Note.all
   end
