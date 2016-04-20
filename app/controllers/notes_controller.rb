@@ -4,14 +4,17 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = Note.new(params.require(:note).permit(:title, :text))
+    @note = Note.new(note_params)
 
-    @note.save
-    redirect_to @note
+    if @note.save
+      redirect_to @note
+    else
+      render 'new'
+    end
   end
 
   def new
-
+    @note = Note.new
   end
 
   def edit
@@ -29,4 +32,9 @@ class NotesController < ApplicationController
   def destroy
 
   end
+
+  private
+    def note_params
+      params.require(:note).permit(:title, :text)
+    end
 end
