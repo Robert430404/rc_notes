@@ -4,5 +4,7 @@
   <strong><%= note.title %></strong>
   <br />
   <%= note.text %>
+  <%= link_to 'View', note_path(note) %>
+  <%= link_to 'Edit', edit_note_path(note) %>
   <hr />
 <% end %>
