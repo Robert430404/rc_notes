@@ -1,10 +1,14 @@
-<h1>Your Notes</h1>
-<%= link_to 'New Note', new_note_path %>
+<div class="row">
+  <h1>Your Notes</h1>
+  <%= link_to 'New Note', new_note_path %>
+</div>
 <% @notes.each do |note| %>
-  <strong><%= note.title %></strong>
-  <br />
-  <%= note.text %>
-  <%= link_to 'View', note_path(note) %>
-  <%= link_to 'Edit', edit_note_path(note) %>
-  <hr />
+  <div class="row">
+    <strong><%= note.title %></strong>
+    <br />
+    <%= note.text %>
+    <%= link_to 'View', note_path(note) %>
+    <%= link_to 'Edit', edit_note_path(note) %>
+    <hr />
+  </div>
 <% end %>
