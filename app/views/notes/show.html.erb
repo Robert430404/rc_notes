@@ -1,7 +1,10 @@
-<h1>Title</h1>
-<p><%= @note.title %></p>
-
-<h1>Text</h1>
-<p><%= @note.text %></p>
-<%= link_to 'Edit', edit_note_path(@note) %>
-<%= link_to 'Return To Notes', notes_path %>
+<div class="row">
+  <h1>Title</h1>
+  <p><%= @note.title %></p>
+</div>
+<div class="row">
+  <h1>Text</h1>
+  <p><%= @note.text %></p>
+  <%= link_to 'Edit', edit_note_path(@note) %>
+  <%= link_to 'Return To Notes', notes_path %>
+</div>
