@@ -6,6 +6,7 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "RC Note" %></title>
 
+    <link href='https://fonts.googleapis.com/css?family=Dosis:400,300,200,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -24,15 +25,11 @@
           </ul>
         </div>
         <div class="top-bar-right">
-          <ul class="dropdown menu" data-dropdown-menu>
+          <ul class="menu" data-dropdown-menu>
             <% if user_signed_in? %>
-              <li>
-              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-              </li>
+              <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
             <% else %>
-              <li>
-              <%= link_to('Login', new_user_session_path)  %>
-              </li>
+              <li><%= link_to('Login', new_user_session_path)  %></li>
             <% end %>
           </ul>
         </div>

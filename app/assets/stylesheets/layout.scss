@@ -12,10 +12,19 @@ $overlay-white: rgba(255, 255, 255, .25);
 $overlay-black: rgba(00, 00, 00, .25);
 
 $radius: 4px;
+$font-family: 'Dosis', 'Segoe UI', 'Helvetica Neue', Helveitca, Arial, sans-serif;
 
 // Tag SCSS
 body {
-  font-family: sans-serif;
+  font-family: $font-family;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family;
 }
 
 // Class SCSS
@@ -26,14 +35,34 @@ body {
     .menu-text {
       background: $overlay-black;
       border-radius: $radius;
+      transition: all .5s;
       a {
         padding: 0 !important;
         margin: 0;
         color: $white;
         opacity: 1;
-        transition: all .3s;
+        transition: all .5s;
         &:hover {
-          opacity: .5;
+          color: $black;
+        }
+      }
+      &:hover {
+        background: $overlay-white;
+      }
+    }
+  }
+  .top-bar-right {
+    .menu {
+      li {
+        a{
+          background: $overlay-black;
+          border-radius: $radius;
+          color: $white;
+          transition: all .5s;
+          &:hover {
+            background: $overlay-white;
+            color: $black;
+          }
         }
       }
     }
