@@ -12,9 +12,38 @@
   </head>
 
   <body>
+    <div class="top-bar">
+      <div class="row">
+        <div class="top-bar-left">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">RC Notes</li>
+            <% if user_signed_in? %>
+              <li><%= link_to 'See Your Notes', notes_path %></li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="top-bar-right">
+          <ul class="dropdown menu" data-dropdown-menu>
+            <% if user_signed_in? %>
+              <li>
+              <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+              </li>
+            <% else %>
+              <li>
+              <%= link_to('Login', new_user_session_path)  %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="row">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
 
     <%= yield %>
 
