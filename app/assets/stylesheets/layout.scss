@@ -4,6 +4,14 @@
 
 // Color Variables
 $black: #000;
+$white: #fff;
+
+$primary-color: #1dcab2;
+
+$overlay-white: rgba(255, 255, 255, .25);
+$overlay-black: rgba(00, 00, 00, .25);
+
+$radius: 4px;
 
 // Tag SCSS
 body {
@@ -11,15 +19,23 @@ body {
 }
 
 // Class SCSS
-.menu-text {
-  a {
-    padding: 0 !important;
-    margin: 0;
-    color: $black;
-    opacity: 1;
-    transition: all .3s;
-    &:hover {
-      opacity: .5;
+.top-bar {
+  background: $primary-color;
+  .menu {
+    background: transparent;
+    .menu-text {
+      background: $overlay-black;
+      border-radius: $radius;
+      a {
+        padding: 0 !important;
+        margin: 0;
+        color: $white;
+        opacity: 1;
+        transition: all .3s;
+        &:hover {
+          opacity: .5;
+        }
+      }
     }
   }
 }
