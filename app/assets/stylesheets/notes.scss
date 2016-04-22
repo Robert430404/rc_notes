@@ -21,18 +21,24 @@
     font-size: 20px;
   }
   .button {
-    margin: 0 -1px 0 0;
+    margin: 20px 0 0 0;
     padding: 13px 10px;
     border: 1px solid $off-white;
-    border-top: 20px solid $off-white;
     background: $primary-color;
     text-transform: uppercase;
     color: $black;
     font-size: 16px;
     opacity: 1;
     transition: all .5s;
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+    }
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+    }
     &:hover {
       opacity: .5;
+      color: $off-white;
     }
   }
 }

@@ -31,12 +31,30 @@ h6 {
 
 // Class SCSS
 .page-title {
+  position: relative;
   font-size: 32px;
   text-transform: uppercase;
   margin: 20px 0;
-  padding: 10px 20px;
+  padding: 15px 20px;
   background: $off-white;
   border-radius: $radius;
+  line-height: 1;
+  .button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: $radius;
+    font-size: 16px;
+    padding: 12px;
+    background: $primary-color;
+    color: $black;
+    opacity: 1;
+    transition: all .5s;
+    &:hover {
+      opacity: .5;
+      color: $off-white;
+    }
+  }
 }
 .top-bar {
   background: $primary-color;
