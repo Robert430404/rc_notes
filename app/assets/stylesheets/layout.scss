@@ -50,6 +50,13 @@ h6 {
         background: $overlay-white;
       }
     }
+    a {
+      color: $black;
+      transition: all .5s;
+      &:hover {
+        color: $white;
+      }
+    }
   }
   .top-bar-right {
     .menu {

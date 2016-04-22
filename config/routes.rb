@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   # Home Route
   root 'home#index'
 
@@ -7,4 +6,9 @@ Rails.application.routes.draw do
 
   # Resource routes
   resources :notes
+
+  # Authentication Routes  
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
 end
