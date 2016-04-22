@@ -5,6 +5,8 @@
 // Color Variables
 $black: #000;
 $white: #fff;
+$off-white: #ecedee;
+$light-grey: #cbcbcb;
 
 $primary-color: #1dcab2;
 
@@ -28,6 +30,14 @@ h6 {
 }
 
 // Class SCSS
+.page-title {
+  font-size: 32px;
+  text-transform: uppercase;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background: $off-white;
+  border-radius: $radius;
+}
 .top-bar {
   background: $primary-color;
   .menu {

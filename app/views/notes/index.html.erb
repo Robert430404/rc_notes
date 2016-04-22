@@ -1,17 +1,39 @@
 <div class="row">
-  <h1>Your Notes</h1>
-  <%= link_to 'New Note', new_note_path %>
-</div>
-<% @notes.each do |note| %>
-  <div class="row">
-    <strong><%= note.title %></strong>
-    <br />
-    <%= note.text %>
-    <%= link_to 'View', note_path(note) %>
-    <%= link_to 'Edit', edit_note_path(note) %>
-    <%= link_to 'Delete', note_path(note),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-    <hr />
+  <div class="columns large-12 medium-12 small-12">
+    <h1 class="page-title">Your Notes</h1>
+    <%= link_to 'Make New Note',
+                new_note_path,
+                :class => 'button'
+    %>
   </div>
-<% end %>
+</div>
+<div class="row">
+  <% @notes.each do |note| %>
+    <div class="columns large-4 medium-4 small-12">
+      <div class="card">
+        <h3 class="note-title"><%= note.title %></h3>
+        <div class="note-excerpt">
+          <%= note.text %>
+        </div>
+        <div class="button-row">
+          <%= link_to 'View',
+                      note_path(note),
+                      :class => 'button columns large-4 medium-12 small-12'
+          %>
+          <%= link_to 'Edit',
+                      edit_note_path(note),
+                      :class => 'button columns large-4 medium-12 small-12'
+          %>
+          <%= link_to 'Delete', note_path(note),
+                      method: :delete,
+                      data: {
+                        confirm: 'Are you sure?'
+                      },
+                      :class => 'button columns large-4 medium-12 small-12'
+          %>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

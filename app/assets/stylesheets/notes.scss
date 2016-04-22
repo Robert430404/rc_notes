@@ -1,3 +1,38 @@
 // Place all the styles related to the notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'layout';
+
+.card {
+  background: $off-white;
+  border-radius: $radius;
+  padding: 20px;
+  margin-bottom: 20px;
+  .note-title {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+    padding: 10px 15px;
+    border-radius: $radius;
+    background: $light-grey;
+  }
+  .note-excerpt {
+    color: $black;
+    font-size: 20px;
+  }
+  .button {
+    margin: 0 -1px 0 0;
+    padding: 13px 10px;
+    border: 1px solid $off-white;
+    border-top: 20px solid $off-white;
+    background: $primary-color;
+    text-transform: uppercase;
+    color: $black;
+    font-size: 16px;
+    opacity: 1;
+    transition: all .5s;
+    &:hover {
+      opacity: .5;
+    }
+  }
+}
