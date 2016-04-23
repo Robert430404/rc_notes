@@ -6,12 +6,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def one_user_registered?
     if ((User.count == 1) & (user_signed_in?))
-      redirect_to root_path
+      redirect_to notes_path
     elsif User.count == 1
       redirect_to new_user_session_path
     end
   end
-  
+
 # before_action :configure_sign_up_params, only: [:create]
 # before_action :configure_account_update_params, only: [:update]
 

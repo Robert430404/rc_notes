@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   # Home Route
   # root 'home#index'
   devise_scope :user do
-    root :to => 'devise/registrations#new'
+    if User.count == 1
+      root :to => 'devise/sessions#new'
+    else
+      root :to => 'devise/registrations#new'
+    end
   end
   # GET Routes
 
