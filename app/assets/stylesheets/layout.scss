@@ -9,6 +9,7 @@ $off-white: #ecedee;
 $light-grey: #cbcbcb;
 
 $primary-color: #1dcab2;
+$primary-red: #ca1d1d;
 
 $overlay-white: rgba(255, 255, 255, .25);
 $overlay-black: rgba(00, 00, 00, .25);
@@ -56,6 +57,7 @@ h6 {
     }
   }
 }
+
 .top-bar {
   background: $primary-color;
   .menu {
@@ -100,6 +102,47 @@ h6 {
           }
         }
       }
+    }
+  }
+}
+
+.alert {
+  position: relative;
+  background: $off-white;
+  border-top: 3px solid $primary-red;
+  padding: 20px;
+  border-radius: $radius;
+  ul {
+    margin: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $off-white;
+    background: $primary-red;
+    width: 25px;
+    height: 25px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: $radius;
+    font-size: 26px;
+    font-weight: bold;
+    opacity: 1;
+    transition: all .5s;
+    &:hover {
+      opacity: .5;
+    }
+  }
+  &.alert-notice {
+    border-color: $primary-color;
+    .close {
+      background: $primary-color;
     }
   }
 }

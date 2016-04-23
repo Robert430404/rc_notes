@@ -40,13 +40,15 @@
     </div>
 
     <% flash.each do |key, value| %>
-      <div class="row alert alert-<%= key %>">
-        <a href="#" data-dismiss="alert" class="close" onclick="$(this).parent().slideUp(); return false;">×</a>
+      <div class="row" style="margin-top: 30px;">
+        <div class="columns large-6 medium-8 small-12 large-offset-3 medium-offset-2 alert alert-<%= key %>">
+          <a href="#" class="close" data-dismiss="alert" class="close" onclick="$(this).parent().slideUp(); return false;">×</a>
           <ul>
             <li>
               <%= value %>
             </li>
           </ul>
+        </div>
       </div>
     <% end %>
 
