@@ -1,7 +1,7 @@
 <div class="row">
   <div class="columns large-12 medium-12 small-12">
     <h1 class="page-title">
-      Your Notes
+      <strong><%= current_user.email %>'s</strong> Notes
       <%= link_to 'Make New Note',
                   new_note_path,
                   :class => 'button'
