@@ -75,11 +75,11 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
 production:
-  <<: *default
-  database: rc_notes_production
-  username: rc_notes
-  password: <%= ENV['RC_NOTES_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+#
+# production:
+#   <<: *default
+#   database: rc_notes_production
+#   username: rc_notes
+#   password: <%= ENV['RC_NOTES_DATABASE_PASSWORD'] %>
