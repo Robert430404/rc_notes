@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Home Route
   # root 'home#index'
   devise_scope :user do
-    root :to => 'devise/sessions#new'
+    root :to => 'devise/registrations#new'
   end
   # GET Routes
 
@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   # Authentication Routes
   devise_for :users, controllers: {
-    sessions: 'users/sessions'
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
   }
 end

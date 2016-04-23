@@ -76,6 +76,13 @@
       }
     }
   }
+  .explanation {
+    font-size: 16px;
+    background: $light-grey;
+    padding: 15px;
+    margin: 15px -15px 15px -15px;
+    border-radius: $radius;
+  }
 }
 
 .help-links {
