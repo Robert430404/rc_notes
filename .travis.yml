@@ -8,4 +8,4 @@ script:
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec/
 before_script:
-  - psql -c 'create database rc_notes_development' -U postgres
+  - psql -c 'create database rc_notes_development' -U robert
