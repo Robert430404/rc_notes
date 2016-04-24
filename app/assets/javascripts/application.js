@@ -14,12 +14,40 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function (){
+$(function() {
+  init();
+});
+$(window).bind('page:change', function() {
+  init();
+});
+function init(){
   var titleField    = document.getElementById('title-field');
   var editableTitle = document.getElementById('editable-title');
 
-  titleField.onkeyup = function () {
-    editableTitle.innerHTML = this.value;
+  if(titleField)
+  {
+    titleField.onkeyup = function () {
+      editableTitle.innerHTML = this.value;
+    }
   }
-});
+
+  setTimeout(function () {
+    var elem = document.querySelector('.grid');
+    var msnry = new Masonry( elem, {
+      // options
+      itemSelector: '.grid-item',
+      columnWidth: 400
+    });
+
+    // element argument can be a selector string
+    //   for an individual element
+    var msnry = new Masonry( '.grid', {
+      // options
+    });
+
+    $('.card').css({
+      'opacity': 1,
+      'transform': 'translateY(0%)'
+    });
+  }, 300);
+}

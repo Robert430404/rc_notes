@@ -35,10 +35,14 @@
       }
       input[type=text],
       input[type=email],
-      input[type=password] {
+      input[type=password],
+      textarea {
         border-radius: $radius;
         background: $white;
         border: 0;
+      }
+      textarea {
+        height: 150px;
       }
       .button {
         background: $primary-color;

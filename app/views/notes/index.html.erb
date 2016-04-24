@@ -9,9 +9,9 @@
     </h1>
   </div>
 </div>
-<div class="row">
+<div class="row grid">
   <% @notes.each do |note| %>
-    <div class="columns large-4 medium-4 small-12">
+    <div class="columns large-4 medium-4 small-12 grid-item">
       <div class="card">
         <h3 class="note-title"><%= note.title %></h3>
         <div class="note-excerpt">
