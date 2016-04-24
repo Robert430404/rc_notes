@@ -14,3 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function (){
+  var titleField    = document.getElementById('title-field');
+  var editableTitle = document.getElementById('editable-title');
+
+  titleField.onkeyup = function () {
+    editableTitle.innerHTML = this.value;
+  }
+});

@@ -1,10 +1,17 @@
 <div class="row">
-  <h1>Title</h1>
-  <p><%= @note.title %></p>
-</div>
-<div class="row">
-  <h1>Text</h1>
-  <p><%= @note.text %></p>
-  <%= link_to 'Edit', edit_note_path(@note) %>
-  <%= link_to 'Return To Notes', notes_path %>
+  <div class="columns large-8 medium-10 small-12 large-offset-2 medium-offset-1">
+    <div class="panel">
+      <div class="panel-heading">
+        <h1 class="note-title"><%= @note.title %></h1>
+      </div>
+      <div class="panel-body">
+        <p class="note-text"><%= @note.text %></p>
+        <div class="action-row">
+          <%= link_to 'Edit This Note', edit_note_path(@note), :class => 'button columns large-6 medium-6 small-12' %>
+          <%= link_to 'Return To Notes', notes_path, :class => 'button columns large-6 medium-6 small-12' %>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
 </div>
