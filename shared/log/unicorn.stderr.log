@@ -1,0 +1,9 @@
+I, [2016-04-26T01:54:31.160495 #6632]  INFO -- : Refreshing Gem list
+I, [2016-04-26T01:54:34.031379 #6632]  INFO -- : listening on addr=/home/rc_notes/rc_notes/shared/sockets/unicorn.sock fd=12
+I, [2016-04-26T01:54:34.031501 #6632]  INFO -- : worker=0 spawning...
+I, [2016-04-26T01:54:34.032852 #6632]  INFO -- : worker=1 spawning...
+I, [2016-04-26T01:54:34.034175 #6632]  INFO -- : master process ready
+I, [2016-04-26T01:54:34.037654 #6636]  INFO -- : worker=0 spawned pid=6636
+I, [2016-04-26T01:54:34.037795 #6636]  INFO -- : worker=0 ready
+I, [2016-04-26T01:54:34.038465 #6639]  INFO -- : worker=1 spawned pid=6639
+I, [2016-04-26T01:54:34.038583 #6639]  INFO -- : worker=1 ready
