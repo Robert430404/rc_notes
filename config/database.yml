@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: rc_notes_production
+  database: rc_notes
   username: rc_notes
   password: <%= ENV['RC_NOTES_DATABASE_PASSWORD'] %>
