@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   # Home Route
-  # root 'home#index'
   devise_scope :user do
     if User.count == 1
       root :to => 'devise/sessions#new'
@@ -8,7 +7,13 @@ Rails.application.routes.draw do
       root :to => 'devise/registrations#new'
     end
   end
-  # GET Routes
+
+  # API Routes
+  namespace :api do
+    namespace :v1 do
+      resources :notes, :defaults => { :format => 'json' }
+    end
+  end
 
   # Resource routes
   resources :notes
