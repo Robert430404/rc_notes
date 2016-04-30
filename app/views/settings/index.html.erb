@@ -13,7 +13,7 @@
   			<% @keys.each do |key| %>
   				<li>
 		  			<span class="key"><%= key.access_token %></span>
-		  			<%= link_to 'Delete', setting_path(key),
+		  			<%= link_to 'Delete', apikey_path(key),
                       method: :delete,
                       data: {
                         confirm: 'Are you sure?'
