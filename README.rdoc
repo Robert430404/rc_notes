@@ -1,3 +1,26 @@
-== RC Note
+== RC Notes Description
 
-This is a simple note taking app built on ruby on rails. This project upon completion is going to have a basic REST API in place, in addition to a full web interface for interacting with and reading your notes.
+This is a simple note taking app built on ruby on rails. This project has a basic REST API that allows you to retrieve your notes through an AJAX call.
+
+== Installation
+
+There are a few basic steps that you need to follow in order to setup this application on your server.
+
+You will need a Rails Environment setup and running on a server. Digital Ocean has a very good guide that you can see here:
+
+https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-unicorn-and-nginx-on-ubuntu-14-04
+
+Complete that guide to get your environment ready for the rails application.
+
+Then you are going to want to do the following:
+
+1. create a user for your rails application on your server
+2. setup that user inside of postgres so your copy of the application can run effectively
+3. run rails secret and then assign that value to to this ENV Variable: SECRET_KEY_BASE
+4. assign your postgres password (if you have one) to this ENV Variable: RC_NOTES_DATABASE_PASSWORD
+5. assign your rails environment to production by setting this ENV Variable: RAILS_ENV
+6. Run "rake db:create"
+7. Run "rake db:migrate"
+8. Go to the url that you have the application setup on and complete your registration
+
+You should now be setup and ready to go.
