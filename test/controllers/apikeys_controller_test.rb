@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ApikeyControllerTest < ActionController::TestCase
+class ApikeysControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

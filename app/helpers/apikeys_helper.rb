@@ -1,2 +1,2 @@
-module ApikeyHelper
+module ApikeysHelper
 end
