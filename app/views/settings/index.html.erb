@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="columns large-12 medium-12 small-12">
+    <h1 class="page-title">
+      <strong><%= current_user.email %>'s</strong> Settings
+    </h1>
+  </div>
+</div>
+<div class="row">
+  <div class="columns large-5 medium-6 small-12">
+  	<div class="card">
+  		<h2 class="column-title">API Keys</h2>
+  		<ul class="key-list">
+  			<% @keys.each do |key| %>
+  				<li>
+		  			<span class="key"><%= key.access_token %></span>
+		  			<%= link_to 'Delete', setting_path(key),
+                      method: :delete,
+                      data: {
+                        confirm: 'Are you sure?'
+                      },
+                      :class => 'delete-button'
+          	%>
+		  		</li>
+	  		<% end %>
+  		</ul>
+  	</div>
+  </div>
+</div>
+ 

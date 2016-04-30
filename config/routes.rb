@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   # Resource routes
   resources :notes
+  resources :settings
 
   # Authentication Routes
   devise_for :users, controllers: {
