@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   # Resource routes
   resources :notes
-  resources :apikey
+  resources :apikeys
 
   # Declared Routes
   get '/settings', to: 'settings#index', as: 'setting'
