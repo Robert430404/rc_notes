@@ -99,6 +99,9 @@ h6 {
   .top-bar-right {
     .menu {
       li {
+        margin-left: 10px;
+        display: block;
+        float: right;
         a{
           background: $overlay-black;
           border-radius: $radius;

@@ -29,5 +29,13 @@
       %>
   	</div>
   </div>
+  <div class="columns large-7 medium-6 small-12">
+	  <div class="card">
+	  	<h2 class="column-title">User Information</h2>
+	  	<% @users.each do |user| %>
+	  		Your Email: <%= user.email %>
+	  	<% end %>
+	  </div>
+  </div>
 </div>
  

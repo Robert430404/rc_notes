@@ -29,6 +29,7 @@
           <div class="top-bar-right">
             <ul class="menu" data-dropdown-menu>
               <% if user_signed_in? %>
+                <li><%= link_to('Settings', setting_path) %></li>
                 <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
               <% else %>
                 <li><%= link_to('Login', new_user_session_path)  %></li>
