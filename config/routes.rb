@@ -17,7 +17,10 @@ Rails.application.routes.draw do
 
   # Resource routes
   resources :notes
-  resources :settings
+  resources :apikey
+
+  # Declared Routes
+  get '/settings', to: 'settings#index', as: 'setting'
 
   # Authentication Routes
   devise_for :users, controllers: {
