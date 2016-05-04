@@ -1,6 +1,6 @@
 == RC Notes Description
 
-This is a simple note taking app built on ruby on rails. This project has a basic REST API that allows you to retrieve your notes through an AJAX call.
+This is a simple note taking app built on ruby on rails. It includes a built-in settings panel for creating and manageing your api keys for your installation of the application. This project has a basic REST API that allows you to retrieve your notes through an AJAX call to the server. It is currently setup to allow all origin's access if they have a key.
 
 == Installation
 
